@@ -14,16 +14,16 @@ If you switch often between corporate network which requires the use of proxy, a
 
 ### System
 
-TODO
+See the ```/etc/environment``` [sample configuration file](samples/environment).
 
 ### Java
 
-TODO
+See the ```/etc/environment``` [sample configuration file](samples/environment).
 
 ### NPM
 
-TODO
+See the ```~/.npmrc``` [sample configuration file](samples/.npmrc).
 
 ### Bower
 
-TODO
+See the ```~/.bowerrc``` [sample configuration file](samples/.bowerrc).
