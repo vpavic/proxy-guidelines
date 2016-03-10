@@ -14,6 +14,10 @@ If you switch often between corporate network which requires the use of proxy, a
 
 ### System
 
+You should configure your environment to be aware of your network proxy. This is important since most well-behaved native applications will check for well known environment variable to discover information about network proxy. See [this article] for more details.
+
+The best place to define system-wide environment variables is ```/etc/environment``` file which is specifically meant for that purpose. Please note that variable expansion does not work within ```/etc/environment``` since it is not a script file, but rather consists of assignment expressions.
+
 See the ```/etc/environment``` [sample configuration file](samples/environment).
 
 ### Java
