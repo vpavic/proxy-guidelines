@@ -1,4 +1,4 @@
-JAVA_OPTS="-Dhttp.proxyHost=localhost -Dhttp.proxyPort=3128 -Dhttps.proxyHost=localhost -Dhttps.proxyPort=3128"
+_JAVA_OPTIONS="-Dhttp.proxyHost=localhost -Dhttp.proxyPort=3128 -Dhttps.proxyHost=localhost -Dhttps.proxyPort=3128"
 http_proxy="http://localhost:3128/"
 https_proxy="https://localhost:3128/"
 ftp_proxy="ftp://localhost:3128/"
