@@ -54,4 +54,15 @@ See the ```~/.npmrc``` [sample configuration file](samples/.npmrc).
 
 ### Bower
 
+Bower is configured using JSON file which is stored ```~/.bowerrc```. As described in the [configuration documentation](http://bower.io/docs/config/), network proxy is configured using ```proxy``` and ```https-proxy``` variables.
+
+Here's an example of ```~/.bowerrc``` network proxy configuration:
+
+```json
+{
+  "proxy": "http://localhost:3128",
+  "https-proxy": "http://localhost:3128"
+}
+```
+
 See the ```~/.bowerrc``` [sample configuration file](samples/.bowerrc).
