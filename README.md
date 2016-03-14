@@ -18,6 +18,13 @@ You should configure your environment to be aware of your network proxy. This is
 
 The best place to define system-wide environment variables is ```/etc/environment``` file which is specifically meant for that purpose. Please note that variable expansion does not work within ```/etc/environment``` since it is not a script file, but rather consists of assignment expressions.
 
+Here's an example of ```/etc/environment``` network proxy configuration:
+
+```shell
+http_proxy="http://localhost:3128/"
+https_proxy="https://localhost:3128/"
+```
+
 See the ```/etc/environment``` [sample configuration file](samples/environment).
 
 ### Java
