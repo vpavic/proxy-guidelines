@@ -48,7 +48,7 @@ npm config set proxy http://localhost:3128/
 npm config set https-proxy http://localhost:3128/
 ```
 
-After executing ```npm config``` commands the setting will be saved to ```~/.npmrc``` file. As an alternative to using these commands you can edit this file manually.
+After executing ```npm config``` commands the configuration will be saved to ```~/.npmrc``` file. As an alternative to using these commands you can edit this file manually.
 
 See the ```~/.npmrc``` [sample configuration file](samples/.npmrc).
 
