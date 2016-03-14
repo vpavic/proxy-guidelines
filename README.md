@@ -41,6 +41,15 @@ See the ```/etc/environment``` [sample configuration file](samples/environment).
 
 ### NPM
 
+NPM (node package manager), according to its [configuration documentation](https://docs.npmjs.com/misc/config), should honor the System network proxy configuration. However, in practice this doesn't always work as advertised (possibly depending on NPM version), so if you run into problems try with explicit configuration of network proxy:
+
+```shell
+npm config set proxy http://localhost:3128/
+npm config set https-proxy http://localhost:3128/
+```
+
+After executing ```npm config``` commands the setting will be saved to ```~/.npmrc``` file. As an alternative to using these commands you can edit this file manually.
+
 See the ```~/.npmrc``` [sample configuration file](samples/.npmrc).
 
 ### Bower
