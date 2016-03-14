@@ -29,6 +29,14 @@ See the ```/etc/environment``` [sample configuration file](samples/environment).
 
 ### Java
 
+Many Java applications will check the JVM system properties to discover information about network proxy. See [this article](https://docs.oracle.com/javase/8/docs/technotes/guides/net/proxies.html) for more details. Such JVM system properties should be configured using special environment variable named ```_JAVA_OPTIONS``` which will be picked up by the JVM.
+
+Here's an example of ```_JAVA_OPTIONS``` environment variable decalaration:
+
+```shell
+_JAVA_OPTIONS="-Dhttp.proxyHost=localhost -Dhttp.proxyPort=3128 -Dhttps.proxyHost=localhost -Dhttps.proxyPort=3128"
+```
+
 See the ```/etc/environment``` [sample configuration file](samples/environment).
 
 ### NPM
