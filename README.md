@@ -22,7 +22,7 @@ Here's an example of ```/etc/environment``` network proxy configuration:
 
 ```shell
 http_proxy="http://localhost:3128/"
-https_proxy="https://localhost:3128/"
+https_proxy="http://localhost:3128/"
 ```
 
 See the ```/etc/environment``` [sample configuration file](samples/environment).
