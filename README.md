@@ -25,7 +25,7 @@ http_proxy="http://localhost:3128/"
 https_proxy="http://localhost:3128/"
 ```
 
-See the ```/etc/environment``` [sample configuration file](samples/environment).
+See the ```/etc/environment``` [sample configuration file](https://github.com/vpavic/proxy-guidelines/blob/master/samples/environment).
 
 ### Java
 
@@ -37,7 +37,7 @@ Here's an example of ```JAVA_TOOL_OPTIONS``` environment variable decalaration:
 JAVA_TOOL_OPTIONS="-Dhttp.proxyHost=localhost -Dhttp.proxyPort=3128 -Dhttps.proxyHost=localhost -Dhttps.proxyPort=3128"
 ```
 
-See the ```/etc/environment``` [sample configuration file](samples/environment).
+See the ```/etc/environment``` [sample configuration file](https://github.com/vpavic/proxy-guidelines/blob/master/samples/environment).
 
 ### NPM
 
@@ -50,7 +50,7 @@ npm config set https-proxy http://localhost:3128/
 
 After executing ```npm config``` commands the configuration will be saved to ```~/.npmrc``` file. As an alternative to using these commands you can edit this file manually.
 
-See the ```~/.npmrc``` [sample configuration file](samples/.npmrc).
+See the ```~/.npmrc``` [sample configuration file](https://github.com/vpavic/proxy-guidelines/blob/master/samples/.npmrc).
 
 ### Bower
 
@@ -65,4 +65,4 @@ Here's an example of ```~/.bowerrc``` network proxy configuration:
 }
 ```
 
-See the ```~/.bowerrc``` [sample configuration file](samples/.bowerrc).
+See the ```~/.bowerrc``` [sample configuration file](https://github.com/vpavic/proxy-guidelines/blob/master/samples/.bowerrc).
