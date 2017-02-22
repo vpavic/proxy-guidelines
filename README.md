@@ -14,6 +14,14 @@ CNTLM is your friend in corporate network environments, it allows you to manage 
 
 If you switch often between corporate network which requires the use of proxy, and public networks which don't, consider using [NetworkManager](http://linux.die.net/man/8/networkmanager) dispatcher script available [here](https://github.com/vpavic/bash-scripts/blob/master/cntlm_noproxy_config.sh) to automatically reconfigure the CNTLM's ```NoProxy``` setting according to your current environment. Usage instructions are available in the comments within the script itself.
 
+#### Corkscrew
+
+Corkscrew is a tool for tunneling SSH through HTTP proxies.
+
+For further information on Corkscrew refer to [its homepage](http://agroman.net/corkscrew/).
+
+Corkscrew complements CNTLM nicely in environments that don't allow the use of SSH and force the use of an HTTP proxy, since it makes possible to use that HTTP proxy as a transport for SSH.
+
 ### Configuration
 
 #### System
