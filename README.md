@@ -2,7 +2,9 @@
 
 This repository contains general guidelines and configuration samples for setting up development environment when working behind a corporate network proxy. The guidelines are targeted at Linux users however some parts are likely to be reusable for other operating systems.
 
-### CNTLM
+### Tools
+
+#### CNTLM
 
 CNTLM is an NTLM/NTLMv2 authenticating HTTP proxy which sits between your applications and the corporate network proxy, adding NTLM authentication on-the-fly. You can specify several "parent" proxies and CNTLM will try one after another until one works. Authenticated connections are cached and reused to achieve high efficiency.
 
@@ -12,7 +14,9 @@ CNTLM is your friend in corporate network environments, it allows you to manage 
 
 If you switch often between corporate network which requires the use of proxy, and public networks which don't, consider using [NetworkManager](http://linux.die.net/man/8/networkmanager) dispatcher script available [here](https://github.com/vpavic/bash-scripts/blob/master/cntlm_noproxy_config.sh) to automatically reconfigure the CNTLM's ```NoProxy``` setting according to your current environment. Usage instructions are available in the comments within the script itself.
 
-### System
+### Configuration
+
+#### System
 
 You should configure your environment to be aware of your network proxy. This is important since most well-behaved native applications will check for well known environment variable to discover information about network proxy. See [this article](https://wiki.archlinux.org/index.php/proxy_settings) for more details.
 
@@ -27,7 +31,7 @@ https_proxy="http://localhost:3128/"
 
 See the ```/etc/environment``` [sample configuration file](https://github.com/vpavic/proxy-guidelines/blob/master/samples/environment).
 
-### Java
+#### Java
 
 Many Java applications will check the JVM system properties to discover information about network proxy. See [this article](https://docs.oracle.com/javase/8/docs/technotes/guides/net/proxies.html) for more details. Such JVM system properties should be configured using special environment variable named ```JAVA_TOOL_OPTIONS``` which will be picked up by the JVM.
 
@@ -39,7 +43,7 @@ JAVA_TOOL_OPTIONS="-Dhttp.proxyHost=localhost -Dhttp.proxyPort=3128 -Dhttps.prox
 
 See the ```/etc/environment``` [sample configuration file](https://github.com/vpavic/proxy-guidelines/blob/master/samples/environment).
 
-### NPM
+#### NPM
 
 NPM (node package manager), according to its [configuration documentation](https://docs.npmjs.com/misc/config), should honor the System network proxy configuration. However, in practice this doesn't always work as advertised (possibly depending on NPM version), so if you run into problems try with explicit configuration of network proxy:
 
@@ -52,7 +56,7 @@ After executing ```npm config``` commands the configuration will be saved to ```
 
 See the ```~/.npmrc``` [sample configuration file](https://github.com/vpavic/proxy-guidelines/blob/master/samples/.npmrc).
 
-### Bower
+#### Bower
 
 Bower is configured using JSON file which is stored ```~/.bowerrc```. As described in the [configuration documentation](http://bower.io/docs/config/), network proxy is configured using ```proxy``` and ```https-proxy``` variables.
 
