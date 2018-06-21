@@ -43,7 +43,13 @@ See the ```/etc/environment``` [sample configuration file](https://github.com/vp
 
 Many Java applications will check the JVM system properties to discover information about network proxy. See [this article](https://docs.oracle.com/javase/8/docs/technotes/guides/net/proxies.html) for more details. Such JVM system properties should be configured using special environment variable named ```JAVA_TOOL_OPTIONS``` which will be picked up by the JVM.
 
-Here's an example of ```JAVA_TOOL_OPTIONS``` environment variable decalaration:
+If you have configured system proxy environment variables described in the previous section, you can use the following ```JAVA_TOOL_OPTIONS``` environment variable declaration:
+
+```shell
+JAVA_TOOL_OPTIONS="-Djava.net.useSystemProxies=true"
+```
+
+Alternatively, you can use the following ```JAVA_TOOL_OPTIONS``` environment variable declaration to explicitly configure the proxy details:
 
 ```shell
 JAVA_TOOL_OPTIONS="-Dhttp.proxyHost=localhost -Dhttp.proxyPort=3128 -Dhttps.proxyHost=localhost -Dhttps.proxyPort=3128"
