@@ -43,7 +43,13 @@ See the ```/etc/environment``` [sample configuration file](https://github.com/vp
 
 Many Java applications will check the JVM system properties to discover information about network proxy. See [this article](https://docs.oracle.com/javase/8/docs/technotes/guides/net/proxies.html) for more details. Such JVM system properties should be configured using special environment variable named ```JAVA_TOOL_OPTIONS``` which will be picked up by the JVM.
 
-Here's an example of ```JAVA_TOOL_OPTIONS``` environment variable decalaration:
+If you have configured system proxy environment variables described in the previous section, you can use the following ```JAVA_TOOL_OPTIONS``` environment variable declaration:
+
+```shell
+JAVA_TOOL_OPTIONS="-Djava.net.useSystemProxies=true"
+```
+
+Alternatively, you can use the following ```JAVA_TOOL_OPTIONS``` environment variable declaration to explicitly configure the proxy details:
 
 ```shell
 JAVA_TOOL_OPTIONS="-Dhttp.proxyHost=localhost -Dhttp.proxyPort=3128 -Dhttps.proxyHost=localhost -Dhttps.proxyPort=3128"
@@ -63,18 +69,3 @@ npm config set https-proxy http://localhost:3128/
 After executing ```npm config``` commands the configuration will be saved to ```~/.npmrc``` file. As an alternative to using these commands you can edit this file manually.
 
 See the ```~/.npmrc``` [sample configuration file](https://github.com/vpavic/proxy-guidelines/blob/master/samples/.npmrc).
-
-#### Bower
-
-Bower is configured using JSON file which is stored ```~/.bowerrc```. As described in the [configuration documentation](http://bower.io/docs/config/), network proxy is configured using ```proxy``` and ```https-proxy``` variables.
-
-Here's an example of ```~/.bowerrc``` network proxy configuration:
-
-```json
-{
-  "proxy": "http://localhost:3128",
-  "https-proxy": "http://localhost:3128"
-}
-```
-
-See the ```~/.bowerrc``` [sample configuration file](https://github.com/vpavic/proxy-guidelines/blob/master/samples/.bowerrc).
