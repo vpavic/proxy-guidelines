@@ -1,0 +1,8 @@
+title: Proxy Guidelines
+description: Guidelines for working behind a network proxy
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-minimal
+
+gems:
+  - jekyll-mentions
